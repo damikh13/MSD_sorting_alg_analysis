@@ -17,7 +17,7 @@ plt.plot(df['size'], normalize(df['best time']), label='best time', marker='^')
 
 # theoretical curves for visual comparison
 plt.plot(x, normalize(x), label='O(n)', linestyle='--')
-plt.plot(x, normalize(x * np.log2(x)), label='O(n log n)', linestyle='--')
+plt.plot(x, normalize(x * np.log(x) / np.log(9)), label='O(n log_9 n)', linestyle='--')
 plt.plot(x, normalize(x**2), label='O(n^2)', linestyle='--')
 plt.plot(x, normalize(x**3), label='O(n^3)', linestyle='--')
 
@@ -42,7 +42,7 @@ plt.plot(df['size'], normalize(df['avg ops']), label='average operations', marke
 plt.plot(df['size'], normalize(df['best ops']), label='best operations', marker='^')
 
 plt.plot(x, normalize(x), label='O(n)', linestyle='--')
-plt.plot(x, normalize(x * np.log2(x)), label='O(n log n)', linestyle='--')
+plt.plot(x, normalize(x * np.log(x) / np.log(9)), label='O(n log_9 n)', linestyle='--')
 plt.plot(x, normalize(x**2), label='O(n^2)', linestyle='--')
 plt.plot(x, normalize(x**3), label='O(n^3)', linestyle='--')
 
